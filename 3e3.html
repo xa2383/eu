@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<body bgcolor="skyblue">
+		<center>
+		<h2>
+			JavaScript to count No of Negative, Zero and Positive Elements in an array 
+		</h2>
+		<script>
+			function counter(ar){
+				var num,array1=[0,0,0];
+				for (i=0;i<ar.length;i++) {
+					switch (ar[i]<0) {
+						case true :
+							array1[0]++;
+							break;
+						case false :
+							if (ar[i]==0)
+								array1[1]++;
+							else
+								array1[2]++;
+							break;
+						default :
+							break;
+					}
+				}
+				return(array1);
+			}
+			var ar1=[];
+			var ar=[-1,-2,-3,0,0,5,12,0,-10, 0 , 5 , -20];
+			ar1=counter(ar);
+			document.write ("No of Negative, Zero and Positive Elements are:" + ar1);
+		</script>
+		</center>
+	</body>
+</html>
