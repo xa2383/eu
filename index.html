@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xu</title>
+    <title>BS</title>
 </head>
 <body>
     <ul>
-        <li><a href="1a1.html" download>1a1</a></li>
-        <li><a href="1a2.html" download>1a2</a></li>
-        <li><a href="1a3.html" download>1a3</a></li>
-        <li><a href="3a.html" download>3a</a></li>
-        <li><a href="3b.html" download>3b</a></li>
-        <li><a href="3c1.html" download>3c1</a></li>
-        <li><a href="3c2.html" download>3c2</a></li>
-        <li><a href="3d.html" download>3d</a></li>
-        <li><a href="3e1.html" download>3e1</a></li>
-        <li><a href="3e2.html" download>3e2</a></li>
-        <li><a href="3e3.html" download>3e3</a></li>
-        <li><a href="para.html" download>para</a></li>
-        <li><a href="reverse.html" download>reverse</a></li>
-        <li><a href="4-Chapters_Content-1[2].pdf" download>manual</a></li>
+        <li>
+            <a href="1.c" download>p1</a>
+            <button class="copy-btn" onclick="copyFileContent('1.c')">C</button>
+        </li>
+        <li>
+            <a href="2.c" download>p2</a>
+            <button class="copy-btn" onclick="copyFileContent('2.c')">C</button>
+        </li>
+        <li>
+            <a href="3.c" download>p3</a>
+            <button class="copy-btn" onclick="copyFileContent('3.c')">C</button>
+        </li>
+        <li>
+            <a href="4.c" download>p4</a>
+            <button class="copy-btn" onclick="copyFileContent('4.c')">C</button>
+        </li>
+        <li>
+            <a href="5.c" download>p5</a>
+            <button class="copy-btn" onclick="copyFileContent('5.c')">C</button>
+        </li>
+        <li>
+            <a href="6.c" download>p6</a>
+            <button class="copy-btn" onclick="copyFileContent('6.c')">C</button>
+        </li>
+        <li>
+            <a href="7.c" download>p7</a>
+            <button class="copy-btn" onclick="copyFileContent('7.c')">C</button>
+        </li>
+        <li>
+            <a href="8.c" download>p8</a>
+            <button class="copy-btn" onclick="copyFileContent('8.c')">C</button>
+        </li>
+        <li>
+            <a href="9.c" download>p9</a>
+            <button class="copy-btn" onclick="copyFileContent('9.c')">C</button>
+        </li>
+        <li>
+            <a href="10.c" download>p10</a>
+            <button class="copy-btn" onclick="copyFileContent('10.c')">C</button>
+        </li>
+        <li>
+            <a href="DS LAB" download>MANUAL</a>
+        </li>
     </ul>
+    <script>
+        async function copyFileContent(fileName) {
+            try {
+                const response = await fetch(fileName);
+                const text = await response.text();
+                await navigator.clipboard.writeText(text);
+                alert('File content copied to clipboard!');
+            } catch (error) {
+                alert('Failed to copy file content: ' + error);
+            }
+        }
+    </script>
 </body>
 </html>
