@@ -2,6 +2,12 @@
 #include<malloc.h>
 #define MAX 5
 
+// Function declarations (prototypes)
+void push(int stack[], int *p);
+void pop(int stack[], int *p);
+void display(int stack[], int top);
+int menu();
+
 int main() {
     int stack[5], TOP = MAX, choice, TRUE = 1;
     while (TRUE) {
@@ -63,7 +69,8 @@ void pop(int stack[], int *p) {
 void display(int stack[], int top) {
     int i;
     printf("Elements of the stack are:\n");
-    for (i = TOP; i < MAX; i++) {
+    for (i = top; i < MAX; i++) {
         printf("%d\t", stack[i]);
     }
+    printf("\n");
 }
